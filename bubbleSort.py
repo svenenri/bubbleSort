@@ -6,7 +6,7 @@
 #
 #
 
-import random
+import random, datetime
 
 # A function that generates a random 100 integers between 0 and 10,000
 def randomList(emptyList):
@@ -34,6 +34,8 @@ def bubbleSort(getList):
 		count2 = 1
 	return getList
 
+# Used to calculate program runtime
+start = datetime.datetime.now()
 
 # Create list that will hold a random 100 integers
 newList = []
@@ -43,3 +45,6 @@ randomList(newList)
 
 # Invoke bubbleSort() function and print results
 print bubbleSort(newList)
+
+# Calculate and printe protram runtime
+print "Time to complete:", datetime.datetime.now() - start
